@@ -15,3 +15,4 @@ define('DB_USER', 'if0_XXXXXXXX');             // e.g. if0_12345678
 define('DB_PASS', 'YOUR_INFINITYFREE_PASSWORD'); // Your InfinityFree account/vPanel password
 define('DB_PORT', '3306');
 define('DB_CHARSET', 'utf8mb4');
+
