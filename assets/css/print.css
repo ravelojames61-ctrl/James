@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Print Stylesheet for Visitor Badges and Reports
+   ========================================================================== */
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .app-sidebar,
+  .app-header,
+  .sidebar-toggle-btn,
+  .btn,
+  .filter-bar,
+  .page-actions,
+  .theme-toggle-btn,
+  .modal-close-btn,
+  .no-print {
+    display: none !important;
+  }
+
+  .app-main {
+    margin-left: 0 !important;
+  }
+
+  .page-container {
+    padding: 0 !important;
+  }
+
+  .card {
+    background: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    box-shadow: none !important;
+    color: #000000 !important;
+  }
+
+  .data-table th {
+    background: #f1f5f9 !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #333333 !important;
+  }
+
+  .data-table td {
+    color: #000000 !important;
+    border-bottom: 1px solid #dddddd !important;
+  }
+
+  .visitor-badge-card {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .badge-org-name,
+  .badge-visitor-name,
+  .badge-grid-item span,
+  .badge-barcode-visual {
+    color: #000000 !important;
+  }
+}

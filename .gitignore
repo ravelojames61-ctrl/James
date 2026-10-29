@@ -1,0 +1,24 @@
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment / Secret database config
+config/db.custom.php
+.env
+
+# Raw source archives / uncompiled AdminLTE package
+# (Compiled assets needed at runtime are located in assets/adminlte/)
+AdminLTE-4.10.1/
+
+# Logs & temp files
+*.log
+error_log
+.ftp-deploy-sync-state.json

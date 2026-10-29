@@ -1,0 +1,42 @@
+name: Deploy to InfinityFree via FTP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  web-deploy:
+    name: 🚀 Deploy to InfinityFree
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftp
+          port: 21
+          # InfinityFree default document root is 'htdocs/'.
+          # (If using an addon domain or subdomain, change to: 'yourdomain.com/htdocs/')
+          server-dir: htdocs/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github*
+            **/.github*/**
+            **/AdminLTE-4.10.1/**
+            AdminLTE-4.10.1/**
+            **/sql/**
+            sql/**
+            README.md
+            Visitor_Log_Management_System.md
+            .gitignore
